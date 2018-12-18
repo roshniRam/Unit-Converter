@@ -4,6 +4,7 @@ import 'category.dart';
 
 final _backgroundColor = Colors.green[100];
 
+
 class CategoryRoute extends StatelessWidget {
   const CategoryRoute();
 
@@ -29,6 +30,9 @@ class CategoryRoute extends StatelessWidget {
     Colors.red,
   ];
 
+  /// Makes the correct number of rows for the list view.
+  ///
+  /// For portrait, we construct a [ListView] from the list of category widgets.
   Widget _buildCategoryWidgets(List<Widget> categories) {
     return ListView.builder(
       itemBuilder: (BuildContext context, int index) => categories[index],
@@ -36,34 +40,31 @@ class CategoryRoute extends StatelessWidget {
     );
   }
 
-
   @override
   Widget build(BuildContext context) {
-    // TODO: Create a list of the eight Categories, using the names and colors
-    // from above. Use a placeholder icon, such as `Icons.cake` for each
-    // Category. We'll add custom icons later.
-
     final categories = <Category>[];
 
-    for(var i=0; i <categories.length;i++){
-      categories.add( Category(name: _categoryNames[i], color: _baseColors[i], iconLocation: Icons.cake));
+    for (var i = 0; i < _categoryNames.length; i++) {
+      categories.add(Category(
+        name: _categoryNames[i],
+        color: _baseColors[i],
+        iconLocation: Icons.cake,
+      ));
     }
 
-    // TODO: Create a list view of the Categories
     final listView = Container(
       color: _backgroundColor,
       padding: EdgeInsets.symmetric(horizontal: 8.0),
       child: _buildCategoryWidgets(categories),
     );
 
-    // TODO: Create an App Bar
     final appBar = AppBar(
       elevation: 0.0,
       title: Text(
-        "Unit Converter",
+        'Unit Converter',
         style: TextStyle(
-          color: Colors.black,,
-          fontSize: 30.0
+          color: Colors.black,
+          fontSize: 30.0,
         ),
       ),
       centerTitle: true,
