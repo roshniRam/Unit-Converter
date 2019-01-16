@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'category.dart';
 import 'unit.dart';
 
-final _backgroundColor = Colors.green[100];
+//final _backgroundColor = Colors.green[100];
+final _backgroundColor = Colors.white;
 
 
 class CategoryRoute extends StatelessWidget {

@@ -11,7 +11,7 @@ import 'category_route.dart';
 // TODO: Pass this information into your custom [Category] widget
 const _categoryName = 'Cake';
 const _categoryIcon = Icons.cake;
-const _categoryColor = Colors.green;
+const _categoryColor = Colors.white70;
 
 /// The function that is called when main.dart is run.
 void main() {
