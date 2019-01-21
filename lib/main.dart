@@ -8,10 +8,7 @@ import 'category_route.dart';
 
 
 
-// TODO: Pass this information into your custom [Category] widget
-const _categoryName = 'Cake';
-const _categoryIcon = Icons.cake;
-const _categoryColor = Colors.white70;
+
 
 /// The function that is called when main.dart is run.
 void main() {
@@ -26,6 +23,14 @@ class UnitConverterApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Unit Converter',
+      theme: ThemeData(
+        textTheme: Theme.of(context).textTheme.apply(
+          bodyColor: Colors.black,
+          displayColor: Colors.grey[600]
+        ),
+        primaryColor: Colors.grey[500],
+        textSelectionHandleColor: Colors.green[500]
+      ),
       // TODO: Instead of pointing to exactly 1 Category widget,
       // our home should now point to an instance of the CategoryRoute widget.
       home: CategoryRoute(),
