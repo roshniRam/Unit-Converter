@@ -1,5 +1,6 @@
 import 'package:meta/meta.dart';
 
+/// Information about a [Unit].
 class Unit {
   final String name;
   final double conversion;
