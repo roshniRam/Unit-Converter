@@ -1,8 +1,3 @@
-// Copyright 2018 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
-
-// You can read about packages here: https://flutter.io/using-packages/
 import 'package:flutter/material.dart';
 
 // You can use a relative import, i.e. `import 'category_route.dart;'` or
@@ -26,6 +21,7 @@ class UnitConverterApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Unit Converter',
       theme: ThemeData(
+        fontFamily: 'Raleway',
         textTheme: Theme.of(context).textTheme.apply(
           bodyColor: Colors.black,
           displayColor: Colors.grey[600],
